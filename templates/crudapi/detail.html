@@ -6,9 +6,16 @@
     <title>details</title>
 </head>
 <body>
-     <li>{{car.modelname}}</li>
-     <li>{{car.colour}}</li>
-     <li>{{car.year}}</li>
-     <li>{{car.engine}}</li>
+  <div>
+    {% for x in cars %}
+     <li>{{x.modelname}}</li>
+     <li>{{x.colour}}</li>
+     <li>{{x.year}}</li>
+     <li>{{x.engine}}</li>
+     {% endfor %}
+  </div>
+  <a href="delete/{{x.id}}"><button>Delete</button></a>
+  <a href="delete/{{x.id}}"><button>Update</button></a>
+
 </body>
 </html>

@@ -18,6 +18,10 @@ def addcar(request):
     return render(request, 'crudapi/addcar.html')
 
 def detailcar( request, car_id):
-    car = Cars.objects.filter(pk = car_id)
-    print(car.modelname)
-    return render(request, 'crudapi/Detail.html',{'car': car })
+    car = Cars.objects.filter(pk = car_id).values()
+    return render(request, 'crudapi/Detail.html',{'cars': car })
+
+def delete (request, car_id):
+    car = Cars.objects.get(pk= car_id)
+    car.delete()
+    return redirect("api/home")
