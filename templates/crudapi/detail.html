@@ -12,10 +12,12 @@
      <li>{{x.colour}}</li>
      <li>{{x.year}}</li>
      <li>{{x.engine}}</li>
+     <li>{{x.id}}</li>
+
      {% endfor %}
   </div>
-  <a href="delete/{{x.id}}"><button>Delete</button></a>
-  <a href="delete/{{x.id}}"><button>Update</button></a>
+  <a href="/api/delete/{{x.id}}/">Delete</a>
+  <a href="/api/update/{x.id}/">Delete</a>
 
 </body>
 </html>
