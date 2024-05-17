@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <th>Model Name</th>
+            <th>Colour</th>
+            <th>Year</th>
+            <th>Engine</th>
+        </thead>
+        <tbody>
+        {% for s in  carls %}
+        <tr>
+            <td><a href="/api/{{s.id}}/"> {{s.modelname}}</a></td>
+            <td>{{s.colour}}</td>
+            <td>{{s.year}}</td>
+            <td>{{s.engine}}</td>
+        </tr>
+    </tbody>
+        {% endfor %}
+    </table>
+</body>
+</html>
