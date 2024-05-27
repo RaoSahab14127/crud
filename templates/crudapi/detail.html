@@ -8,16 +8,14 @@
 <body>
   <div>
     {% for x in cars %}
-     <li>{{x.modelname}}</li>
-     <li>{{x.colour}}</li>
-     <li>{{x.year}}</li>
-     <li>{{x.engine}}</li>
-     <li>{{x.id}}</li>
+     <li>{{x.fullname}}</li>
+     <li>{{x.dob}}</li>
+     <li>{{x.nationality}}</li>
 
-     {% endfor %}
+     
   </div>
-  <a href="/api/delete/{{x.id}}/">Delete</a>
-  <a href="/api/update/{x.id}/">Delete</a>
-
+  <a href="/api/{{x.id}}/delete/">Delete</a>
+  <a href="/api/update/{{x.id}}/">update</a>
+  {% endfor %}
 </body>
 </html>

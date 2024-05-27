@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>update form</title>
 </head>
 <body>
+   
     <form action="" method="POST">
         {% csrf_token %} 
         <input type="text" name= "fullname" id="fullname" placeholder="fullname">
@@ -14,22 +15,5 @@
 
         <button type="submit"> submit</button>
     </form>
-    <table>
-        <thead>
-            <th>Full Name</th>
-            <th>Date of Birth</th>
-            <th>Nationality</th>
-
-        </thead>
-        <tbody>
-        {% for s in  carls %}
-        <tr>
-            <td><a href="/api/{{s.id}}/"> {{s.fullname}}</a></td>
-            <td>{{s.dob}}</td>
-            <td>{{s.nationality}}</td>
-        </tr>
-    </tbody>
-        {% endfor %}
-    </table>
 </body>
 </html>
